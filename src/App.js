@@ -4,6 +4,7 @@ import { NavBar } from './components/NavBar';
 import { Shop } from './pages/shop/Shop';
 import { Cart } from './pages/cart/Cart';
 import { ShopContextProvider } from './context/shopContext';
+import { Home } from './pages/home/Home';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route path='/' />
+            <Route path='/' element={<Home />}/>
             <Route path='/shop' element={<Shop />}/>
             <Route path='/cart' element={<Cart />}/>
           </Routes>
