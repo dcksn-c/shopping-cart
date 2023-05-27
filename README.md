@@ -2,4 +2,4 @@
 
 Build Shopping Cart using React.
 
-[Live Demo](http://dcksn-c.github.io/) :point_left:
+[Live Demo](http://dcksn-c.github.io/shopping-cart) :point_left:
