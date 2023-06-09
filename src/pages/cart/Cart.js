@@ -4,6 +4,7 @@ import { ShopContext } from '../../context/shopContext'
 import { CartItem } from './CartItem';
 import { useNavigate } from 'react-router-dom';
 import uniqid from 'uniqid';
+import { motion } from 'framer-motion';
 
 export const Cart = () => {
   const { cartItems, getTotalCartAmount } = useContext(ShopContext);
@@ -14,7 +15,11 @@ export const Cart = () => {
   }
 
   return (
-    <div className='cart'>
+    <motion.div
+      className='cart'
+      initial={{opacity:0}}
+      animate={{opacity:1}}
+      transition={{duration:0.75, ease:'easeOut'}}>
       <div className='cartTitle'>
         <h1>Cart Items</h1>
       </div>
@@ -39,6 +44,6 @@ export const Cart = () => {
           </div>
         )
       }
-    </div>
+    </motion.div>
   )
 }

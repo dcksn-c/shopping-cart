@@ -1,10 +1,15 @@
 import React from 'react'
 import { PRODUCTS } from '../../products'
 import { Product } from './Product'
+import { motion } from 'framer-motion';
 
 export const Shop = () => {
   return (
-    <div className='shop'>
+    <motion.div
+      className='shop'
+      initial={{opacity:0}}
+      animate={{opacity:1}}
+      transition={{duration:0.75, ease:'easeOut'}}>
         <div className='shopTitle'>
           <h1>Light Cones</h1>
         </div>
@@ -15,6 +20,6 @@ export const Shop = () => {
               ))}
           </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
